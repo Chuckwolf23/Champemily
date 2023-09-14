@@ -14,9 +14,16 @@ let result3 = addFive(37); // returns 42
 
 
 ***********************************************************************/
+//create a function that adds 5
+let addFive = (num) => {return num + 5}
+//declear fuction named addFive
 
-// Your code here 
-
+//set arg to num
+// fat arrow syntax is num + 5
+// Your code here
+console.log( addFive(0)); // returns 5
+// console.log(let result2 = addFive(10)); // returns 15
+// console.log(let result3 = addFive(37)); // returns 42
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = addFive;
