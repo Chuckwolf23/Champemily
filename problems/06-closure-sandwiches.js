@@ -17,7 +17,27 @@ sandwich2("pb") // => "One sandwich with tomato and pb"
 
 ***********************************************************************/
 
-// Your code here 
+// Create a function named sandwichMaker()
+const sandwichMaker = () => {
+  let order = 'One sandwich with tomato';
+  return function (ingredient) {
+    order = order + " and " + ingredient;
+    return order;
+  }
+}
+// Set a variable to hold the order
+// Create another function, takes in any amount of ingredients
+// Separates each ingredient with "and"
+
+let sandwich = sandwichMaker(); // => returns a function
+console.log(sandwich("spinach"))  // => "One sandwich with tomato and spinach"
+console.log(sandwich("jelly")) // => "One sandwich with tomato and spinach and jelly"
+console.log(sandwich("bread")) // => "One sandwich with tomato and spinach and jelly and bread"
+
+//Another Sandwich:
+let sandwich2 = sandwichMaker(); // => returns a function
+console.log(sandwich2("pb")) // => "One sandwich with tomato and pb"
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
