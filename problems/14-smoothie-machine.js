@@ -21,9 +21,32 @@ let smoothie2 = smoothieMachine("apples", "bananas", "berries");
 console.log(smoothie2("pineapple"));
 // prints "I'm having a smoothie with apples and bananas and berries and pineapple"
 ***********************************************************************/
+//make function named smoothieMachine(arg accept any numbers of par)
+const smoothieMachine = function(){
+// declear the order
+let order = "I'm having a smoothie with "+
+//declear return function
+return function(...indegrents){
+  // for(let i = 0; i < indegrents.length; i++){
+  order = order  +  indegrents.join(" and ")
+//return order  + indegrents
+return order
+  }
 
-// Your code here 
+}
+// }
+let smoothie1 = smoothieMachine();
 
+console.log(smoothie1("milk"));
+// prints "I'm having a smoothie with milk"
+console.log(smoothie1("kale", "spinach"));
+// prints "I'm having a smoothie with milk and kale and spinach"
+console.log(smoothie1("honey", "pears", "berries"));
+// prints "I'm having a smoothie with milk and kale and spinach and honey and pears and berries"
+
+let smoothie2 = smoothieMachine("apples", "bananas", "berries");
+console.log(smoothie2("pineapple"));
+// prints "I'm having a smoothie with apples and bananas and berries and pineapple"
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
   module.exports = smoothieMachine;
